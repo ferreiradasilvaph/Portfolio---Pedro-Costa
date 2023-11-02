@@ -73,6 +73,9 @@ header .navegacao-primaria li a {
     opacity: 1;
     animation: pisca 1s infinite;
 }
+.section-div img {
+    max-width: 100%;
+}
 @keyframes pisca {
     from {
         opacity: 1;
@@ -81,9 +84,6 @@ header .navegacao-primaria li a {
     to {
         opacity: 0;
     }
-}
-.section-div img {
-    max-width: 100%;
 }
 @keyframes inicializar {
     from {
@@ -98,7 +98,7 @@ header .navegacao-primaria li a {
 }
 /* seção principal sobre mim */
 main {
-    background-color: #a59191;
+    background-color: #c19191;
 }
 main .sobre {
     margin-top: 50px;
@@ -161,6 +161,7 @@ main .sobre {
     display: grid;
     grid-column: 1/-1;
     grid-template-columns: 1fr 1fr;
+    gap: 50px;
 }
 .sobre-texto h1{
     font-size: 2.3rem;
@@ -227,18 +228,4 @@ main .sobre {
 }
 .area-1{
     visibility: hidden;
-}
-
-
-div .carrossel-slider{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    box-shadow: 200px 100px 0px white;
-    background-color: #f9f3f3;
-}
-
-.carrossel-slider img {
-    transform: scale(1.2);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
 }

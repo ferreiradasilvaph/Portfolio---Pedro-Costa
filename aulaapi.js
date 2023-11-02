@@ -1,4 +1,4 @@
-// Criação de uma API
+// Criação de uma API com js. 
 
 // // Define a chave da API e a URL base para obter as bandeiras dos países.
 const apiKey = "af042ed61c29b1a3951f1d02cd1740b0"; // chave da API 
@@ -16,22 +16,22 @@ const countryElement = document.getElementById("#country");
 const humidityElement = document.getElementById("#humidity span");
 const windElement = document.getElementById("#wind span");
 
-// Função para obter dados meteorológicos de uma cidade específica.
+// Função para obter dados meteorológicos de uma cidade.
 const getWeatherData = async (city) => {
 
   // Constrói a URL da API do OpenWeatherMap com a cidade e sua chave de API.
-  const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metricC&appid=${apiKey}&lang=pt_br`;
+  const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metricC&appid=${apiKey}&lang=pt_br`; // duvida se existe a possibilidade de passar a chave diretamente sem o uso de uma variável.
 
   // Faz uma solicitação à API usando fetch e aguarda a resposta.
   const resposta = await fetch(apiWeatherURL); // perscrução a respeito do elemento await // 
   // Converte a resposta em formato JSON.
-  const data = await resposta.json();
+  const data = await resposta.json(); // perscrução a resposta em formato JSON.
 
-  return data; // Retorna os dados meteorológicos.
+  return data; // Retorna os dados meteorológicos. 'resposta' em formato JSON.
 }
 
 const showWeatherData = async (city) => {
-  // Chama a função para obter os dados meteorológicos da cidade especificada.
+  // Chama a função para obter os dados meteorológicos da cidade especificada. Esta função recebe 'async' para obter os dados em questão.
   const data = await getWeatherData(city);
 
   // Atualiza os elementos HTML com os dados meteorológicos obtidos.
@@ -49,7 +49,7 @@ const showWeatherData = async (city) => {
 searchBtn.addEventListener("click", (e) => {
   e.preventDefault(); // Impede o envio do formulário (comportamento padrão).
 
-  const city = cityInput.value; // Obtém a cidade inserida pelo usuário.
+  const city = cityInput.value; // Obtém a cidade inserida pelo usuário. dentro do input.
   showWeatherData(city); // Chama a função para exibir os dados meteorológicos.
 });
 
