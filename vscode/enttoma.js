@@ -10,7 +10,7 @@ function ativarLetra(elemento){
     arrText.forEach((letra, i) => {
         setTimeout(()=>{
             elemento.innerHTML += letra;
-        }, 30 * i)
+        }, 100 * i)
     });
 };
 function ativarLetras(e){
@@ -21,7 +21,7 @@ function ativarLetras(e){
     caracteres.forEach((l, i) => {
         setTimeout(() =>{
             e.innerHTML += l;
-        }, 160 * i)
+        }, 150 * i)
     });
 };
 ativarLetra(titulo);
